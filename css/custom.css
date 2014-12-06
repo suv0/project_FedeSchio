@@ -1,0 +1,225 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	height: 100%;
+	overflow: hidden;
+	background-color: #000;
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+.wrapper {
+	height: 100%;
+}
+.navbar {
+	min-height: 60px;
+	margin-bottom: 0;
+}
+.logo {
+	padding: 0;
+	height: 60px;
+}
+.nav-link li:first-child {
+	margin-left: 50px;
+}
+.nav-link > li > a {
+	line-height: 30px;
+	text-transform: uppercase;
+	text-indent: -9999px;
+	background-image: url('../images/menu-items.png');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	height: 60px;
+}
+.nav-link > li > a.link1 {
+	background-position: 16px 26px;
+	width: 206px;
+}
+.nav-link > li > a.link2 {
+	background-position: -193px 26px;
+	width: 240px;
+}
+.nav-link > li > a.link3 {
+	background-position: -434px 26px;
+	width: 207px;
+}
+.nav-link > li > a.link4 {
+	background-position: -641px 26px;
+	width: 120px;
+}
+.nav-link > li > a.link1:hover, .nav-link > li.active > a.link1 {
+	background-position: 16px -22px;
+}
+.nav-link > li > a.link2:hover, .nav-link > li.active > a.link2 {
+	background-position: -193px -22px;
+}
+.nav-link > li > a.link3:hover, .nav-link > li.active > a.link3 {
+	background-position: -434px -22px;
+}
+.nav-link > li > a.link4:hover, .nav-link > li.active > a.link4 {
+	background-position: -641px -22px;
+}
+.navbar-inverse .nav-link > .active > a, .navbar-inverse .nav-link > .active > a:hover, .navbar-inverse .nav-link > .active > a:focus {
+	background-color: transparent;
+}
+
+.projects-container {
+	padding-left: 0;
+	padding-right: 0;
+	overflow: hidden;
+}
+.projects-block {
+	float: left;
+}
+.projects-row {
+	margin-left: 0;
+	margin-right: 0;
+}
+.project-col {
+	padding: 4px;
+	float: left;
+	position: relative;
+}
+.projects-block .projects-row:first-child .project-col {
+	padding-top: 0;
+}
+.projects-block .projects-row:last-child .project-col {
+	padding-bottom: 0;
+}
+.projects-block .projects-row .project-col:first-child {
+	padding-left: 0;
+}
+.projects-block .projects-row .project-col:last-child {
+	padding-right: 0;
+}
+.projects-container .projects-block:not(:last-child) {
+	padding-right: 8px;
+}
+.project-col a {
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+.project-col:hover .overlay {
+	height: 100%;
+}
+.overlay {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	transition: all 0.5s ease 0s;
+	z-index: 20;
+
+    bottom: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.overlay-text {
+	color: #ffffff;
+	display: block;
+	position: absolute;
+	text-align: center;
+	width: 50%;
+	z-index: 100;
+
+    bottom: 40%;
+    left: 0;
+    margin: 0 auto -30px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	min-height: 40px;
+	background-color: #000;
+}
+.social-icon, .copyright {
+	color: tan;
+	margin: 10px 0 0;
+}
+
+
+
+/*Media Queries*/
+@media screen and (min-width: 320px) and (max-width: 360px){
+	.overlay-text {
+		bottom: 35%;
+	}
+}
+
+@media screen and (min-height: 320px) and (max-height: 360px){
+	.overlay-text {
+		bottom: 30%;
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.nav-link li:first-child {
+		margin-left: 0;
+	}
+	.nav-link > li > a.link1 {
+		background-position: 16 26px;
+		width: 203px;
+	}
+	.nav-link > li > a.link2 {
+		background-position: -193px 26px;
+		width: 235px;
+	}
+	.nav-link > li > a.link3 {
+		background-position: -435px 26px;
+		width: 202px;
+	}
+	.nav-link > li > a.link4 {
+		background-position: -641px 26px;
+		width: 120px;
+	}
+	.nav-link > li > a.link1:hover, .nav-link > li.active > a.link1 {
+		background-position: 16 -22px;
+	}
+	.nav-link > li > a.link2:hover, .nav-link > li.active > a.link2 {
+		background-position: -193px -22px;
+	}
+	.nav-link > li > a.link3:hover, .nav-link > li.active > a.link3 {
+		background-position: -435px -22px;
+	}
+	.nav-link > li > a.link4:hover, .nav-link > li.active > a.link4 {
+		background-position: -641px -22px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+		margin-left: 0;
+	}
+	.nav-link li:first-child {
+		margin-left: 0;
+	}
+	.navbar-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+	body {
+		padding-top: 120px;
+	}
+	.navbar-container {
+		width: 900px;
+	}
+}
+
+@media screen and (min-width: 980px) and (max-width: 1023px) {
+	.navbar-container {
+		width: 980px;
+	}
+}
