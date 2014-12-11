@@ -148,6 +148,42 @@ body {
 
 
 
+
+
+
+/********************
+     Project Slide
+********************/
+.slide {
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.slide .description {
+    color: #fff;
+    margin-left: 80px;
+    margin-top: 200px;
+}
+
+.slide .description, .slide .description a {
+    color: #fff;
+    font-size: 12px;
+}
+
+.slide .description h1 {
+    font-size: 1.8em;
+}
+
+
+
+
+
+
+
+
+
 /*Media Queries*/
 @media screen and (min-width: 320px) and (max-width: 360px){
 	.overlay-text {
