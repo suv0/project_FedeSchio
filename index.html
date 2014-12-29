@@ -44,7 +44,7 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 		<div class="container-fluid projects-container">
-			<div class="projects-block">
+			<div onclick="javascript:location.href='projects.html#secondPage'" class="projects-block">
 				<div class="row projects-row">
 					<div class="project-col">
 						<img src="images/demo/img1.jpg" title="caption1" alt="img1" class="img-responsive project-image">
@@ -233,7 +233,7 @@
 			$(window).bind('resize', containerWidth);
 			$(window).bind('resize', containerHeight);
 			$('html, body, *').mousewheel(function(e, delta) {
-				this.scrollLeft -= (delta * 30);
+				this.scrollLeft -= (delta * 0.3);
 				e.preventDefault();
 			});
 		});

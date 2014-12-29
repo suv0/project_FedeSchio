@@ -6,6 +6,31 @@
  * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
  */
 
+
+
+
+//have to use image of number and play button for the bottom nav
+//client's choice ..
+// create an array for the numbering and the play button
+
+var nav_item		= [
+	'images/point/slider_points_1.png',
+	'images/point/slider_points_2.png',
+	'images/point/slider_points_3.png',
+	'images/point/slider_points_4.png',
+	'images/point/slider_points_5.png',
+	'images/point/slider_points_6.png',
+	'images/point/slider_points_7.png',
+	'images/point/slider_points_8.png',
+	'images/point/slider_points_9.png',
+	'images/point/slider_points_10.png',
+	'images/point/slider_points_11.png',
+	'images/point/slider_points_12.png',
+];
+nav_item['play_btn'] = 'images/point/slider_points_vid.png';
+
+console.log(nav_item[0]);
+
 (function($) {
 	$.fn.fullpage = function(options) {
 		// Create some defaults, extending them with any options that were provided
@@ -228,7 +253,7 @@
 					$(this).find('.fp-tableCell').css('height', getTableHeight($(this)) + 'px');
 				}
 
-				$(this).css('height', windowsHeight + 'px');
+				$(this).css('height', (windowsHeight-100) + 'px');
 
 				//resizing the scrolling divs
 				if(options.scrollOverflow){
@@ -324,7 +349,7 @@
 				$(this).addClass('active');
 			}
 
-			$(this).css('height', windowsHeight + 'px');
+			$(this).css('height', (windowsHeight-100) + 'px');
 
 			if(options.paddingTop || options.paddingBottom){
 				$(this).css('padding', options.paddingTop  + ' 0 ' + options.paddingBottom + ' 0');
@@ -1497,6 +1522,8 @@
 		/**
 		* Creates a landscape navigation bar with dots for horizontal sliders.
 		*/
+
+
 		function addSlidesNavigation(section, numSlides){
             //console.log(section);
 			section.append('<div class="fp-slidesNav"><ul></ul></div>');
@@ -1514,17 +1541,20 @@
             var test = nav.closest('.fp-section').find('.fp-slides');
             var destiny = test.find('.fp-slide').eq($(this).closest('li').index());
 
+
             for(var i =0 ;i<destiny.prevObject.length;i++){
 
                 var str = destiny.prevObject[i].attributes.class.value;
                 //console.log(str);
 
                 if (str.indexOf("video-type") >= 0){
-                    nav.find('ul').append('<li><a href="#"><span aria-hidden="true" class="glyphicon glyphicon-play" ></span></a></li>');
+                    //nav.find('ul').append('<li><a href="#"><span aria-hidden="true" class="glyphicon glyphicon-play" ></span></a></li>');
+                    nav.find('ul').append('<li><a href="#"><span style="background-image: url('+nav_item['play_btn']+')" ></span></a></li>');
                 }
                 else
                 {
-                    nav.find('ul').append('<li><a href="#"><span>'+(i+1)+'</span></a></li>');
+                    //nav.find('ul').append('<li><a href="#"><span>'+(i+1)+'</span></a></li>');
+                    nav.find('ul').append('<li><a href="#"><span style="background-image: url('+nav_item[i]+')" > </span></a></li>');
                 }
 
 

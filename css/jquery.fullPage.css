@@ -63,16 +63,11 @@ html, body {
     z-index: 4;
     top: 50%;
     cursor: pointer;
-    width: 0;
-    height: 0;
-    border-style: solid;
     margin-top: -38px;
 }
 .fp-controlArrow.fp-prev {
     left: 15px;
     width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
 }
 .fp-controlArrow.fp-next {
     right: 15px;
@@ -102,12 +97,12 @@ html, body {
 }
 .fp-slidesNav{
     position: absolute;
-    z-index: 9999999999;
+    z-index: 4;
     left: 50%;
     opacity: 1;
 }
 .fp-slidesNav.bottom {
-    bottom: 50px;
+    bottom: 180px;
 }
 .fp-slidesNav.top {
     top: 17px;
@@ -144,20 +139,13 @@ html, body {
 }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-
-    top: 1px;
+    top: 2px;
     left: 2px;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #000;
+    width: 8px;
+    height: 8px;
     background: rgba(0, 0, 0, 0);
-    border-radius: 50%;
     position: absolute;
     z-index: 1;
-    text-align: center;
-    color: rgb(183, 179, 168);
-    background: black;
-    line-height: 25px;
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;
@@ -184,3 +172,8 @@ html, body {
 #fp-nav ul li .fp-tooltip.left {
     left: 20px;
 }
+
+.video-type{
+    position: relative;
+}
+

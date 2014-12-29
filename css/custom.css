@@ -15,6 +15,7 @@ body {
 .navbar {
 	min-height: 60px;
 	margin-bottom: 0;
+	background-color: black;
 }
 .logo {
 	padding: 0;
@@ -134,13 +135,12 @@ body {
     margin-right: auto;
 }
 .footer {
-	position: fixed;
 	bottom: 0;
 	width: 100%;
 	height: 40px;
 	min-height: 40px;
 	background-color: #000;
-    z-index: 1;
+	font-size: 14px;
 }
 .social-icon, .copyright {
 	color: tan;
@@ -155,6 +155,12 @@ body {
 /********************
      Project Slide
 ********************/
+.fp-section{
+	margin-bottom: 40px;
+}
+.fp-slidesNav.bottom {
+	bottom: -30px;
+}
 .slide {
     background-position: center;
     background-size: cover;
@@ -199,6 +205,9 @@ body {
     display: flex;
     display: -webkit-flex;
     margin: 0;
+
+    background: rgba(0, 0, 0, 0.46);
+    border-bottom: 1px solid rgba(170, 170, 170, .40);
 }
 #fp-nav ul li a {
     flex: 1;
@@ -208,15 +217,49 @@ body {
 }
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span {
-    background: #333;
+    border-radius: 30px;
+
 }
+
+
+#fp-nav ul li a.active span{
+    background: #d3bc9d;
+    border: 1px solid #f6d8b1;
+}
+
 #fp-nav ul li a span {
-    width: 100%;
-    height: 100%;
+    top: 5%;
+    left: 20%;
+    width: 60%;
+    height: 90%;
     border-radius: 0;
 }
 
 
+
+
+.fp-slidesNav.bottom ul li a span
+{
+	background-position: 0px 0px;
+	width : 24px;
+	height: 24px;
+	opacity: 0.5;
+}
+
+.fp-slidesNav.bottom ul li a.active span{
+	background-position: 0px -32px;
+}
+
+
+.fp-slidesNav.bottom ul li a span:hover
+{
+    opacity: 1;
+}
+
+.fp-slidesNav.bottom ul li a span.glyphicon-play:before
+{
+    margin-left: 3px;
+}
 
 
 
