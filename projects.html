@@ -285,13 +285,16 @@
                 console.log('index: '+index);
                 console.log('slideAnchor: '+slideAnchor);
                 console.log('slideIndex: '+slideIndex);
+            },
+            onLeave: function(index, nextIndex, direction){
+                $(".footer").hide();
+            },
+            afterLoad: function(anchorLink, index){
+                $(".footer").show();
             }
         });
 
-        var testing = false;
-        setInterval(function(){
-            console.log(testing);
-        },20);
+
 
 
 
