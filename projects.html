@@ -23,7 +23,7 @@
 <body>
 <div class="wrapper">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container navbar-container">
+        <div class="container-fluid  navbar-container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -265,11 +265,15 @@
 <script type="text/javascript" src="js/video_background.js"></script>
 
 
+<script type="text/javascript" src="js/jquery.unevent.js"></script>
 
 
 <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 <script type="text/javascript" src="js/myJs.js"></script>
 <script>
+
+
+
     $(document).ready(function() {
         $('#fullpage').fullpage({
             navigation:true,
@@ -283,6 +287,11 @@
                 console.log('slideIndex: '+slideIndex);
             }
         });
+
+        var testing = false;
+        setInterval(function(){
+            console.log(testing);
+        },20);
 
 
 
@@ -302,6 +311,8 @@
 
 
     });
+
+
 </script>
 </body>
 </html>

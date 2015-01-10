@@ -29,8 +29,6 @@ var nav_item		= [
 ];
 nav_item['play_btn'] = 'images/point/slider_points_vid.png';
 
-console.log(nav_item[0]);
-
 (function($) {
 	$.fn.fullpage = function(options) {
 		// Create some defaults, extending them with any options that were provided
@@ -628,6 +626,7 @@ console.log(nav_item[0]);
 		* by 'automatically' scrolling a section or by using the default and normal scrolling.
 		*/
 		function scrolling(type, scrollable){
+			testing = true;
 			if(type == 'down'){
 				var check = 'bottom';
 				var scrollSection = $.fn.fullpage.moveSectionDown;
@@ -1549,7 +1548,7 @@ console.log(nav_item[0]);
 
                 if (str.indexOf("video-type") >= 0){
                     //nav.find('ul').append('<li><a href="#"><span aria-hidden="true" class="glyphicon glyphicon-play" ></span></a></li>');
-                    nav.find('ul').append('<li><a href="#"><span style="background-image: url('+nav_item['play_btn']+')" ></span></a></li>');
+                    nav.find('ul').append('<li><a href="#"><span style="width:24px; background-image: url('+nav_item['play_btn']+')" ></span></a></li>');
                 }
                 else
                 {

@@ -17,9 +17,17 @@ body {
 	margin-bottom: 0;
 	background-color: black;
 }
+
+.navbar .collapse
+{
+	float: right;
+	margin-right: 13px;
+}
+
 .logo {
 	padding: 0;
 	height: 60px;
+	margin-left: 10px !important;
 }
 .nav-link li:first-child {
 	margin-left: 50px;
@@ -264,9 +272,10 @@ body {
 
 .fp-slidesNav.bottom ul li a span
 {
+	background-repeat: no-repeat;
 	background-position: 0px 0px;
-	width : 24px;
-	height: 24px;
+	width : 25px;
+	height: 25px;
 	opacity: 0.5;
 }
 
